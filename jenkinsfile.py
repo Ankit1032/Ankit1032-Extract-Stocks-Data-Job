@@ -8,5 +8,10 @@ pipeline {
                 bat 'System.setProperty("hudson.plugins.git.GitSCM.ALLOW_LOCAL_CHECKOUT", "TRUE")'
             }
         }
+        stage('main') {
+            steps {
+                sh 'python main.py'
+            }
+        }
     }
 }
